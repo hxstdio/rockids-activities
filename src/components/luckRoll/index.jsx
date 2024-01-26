@@ -1,4 +1,5 @@
 import React, { forwardRef, useState, useRef, useEffect, useImperativeHandle } from 'react';
+import rockIcon from '../../assets/rock.png';
 import './index.css';
 
 const LuckRoll = forwardRef((props, ref) => {
@@ -31,7 +32,7 @@ const LuckRoll = forwardRef((props, ref) => {
         let _li = new Array(6).fill('').map((res, index) => {
             return (
                 props.list.map((res2, index2) => {
-                    return <li key={index2}>{res2}</li>
+                    return <li className="item" key={index2}>{res2}</li>
                 })
             )
         });
@@ -39,10 +40,11 @@ const LuckRoll = forwardRef((props, ref) => {
     }, []);
 
     return (
-        <div className="luckRollBox" style={{ "width": props.width || '600px', "height": props.height || '200px' }}>
+        <div className="luckRollBox" style={{ "width": props.width || '600px', "height": props.height || '100px' }}>
             <div className="luckRollitem">
                 <ul className='list-container' ref={rollRef}>{liDom}</ul>
             </div>
+            <img src={rockIcon} className="rock-btn" onClick={props.startHandler} />
         </div>
     )
 
