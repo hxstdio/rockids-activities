@@ -4,10 +4,11 @@ import { CANDIDATES } from '../constants/data';
 import { generateRandomWithMax } from '../utils/fakeRandom';
 import cloud from '../assets/cloud.png';
 import cloud1 from '../assets/cloud1.png';
+import logo from '../assets/rockids-logo.png';
 import './App.css';
 
 function App() {
-  const [data, setData] = useState(CANDIDATES);
+  const [data] = useState(CANDIDATES);
   const rollRef = useRef(null);
   const onStartClick = () => {
       const luckyNumber = generateRandomWithMax(data.length);
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div className="home-page">
-    
+      <img src={logo} className="logo" alt="logo" />
       <div className='lottery-container'>
         <LuckRoll startHandler={onStartClick} width="80%" cols={[1]} list={data} ref={rollRef} />
       </div>

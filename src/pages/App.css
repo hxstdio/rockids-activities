@@ -10,6 +10,13 @@
 
   position: relative;
 }
+.logo {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+}
 
 .lottery-container {
   display: flex;
