@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { forwardRef, useState, useRef, useEffect, useImperativeHandle } from 'react';
 import rockIcon from '../../assets/rock.png';
 import './index.css';
@@ -44,7 +45,7 @@ const LuckRoll = forwardRef((props, ref) => {
             <div className="luckRollitem">
                 <ul className='list-container' ref={rollRef}>{liDom}</ul>
             </div>
-            <img src={rockIcon} className="rock-btn" onClick={props.startHandler} />
+            <img src={rockIcon} className="rock-btn" onClick={props.startHandler} alt="start button" />
         </div>
     )
 
