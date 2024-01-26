@@ -19,7 +19,7 @@ function App() {
     <div className="home-page">
       <img src={logo} className="logo" alt="logo" />
       <div className='lottery-container'>
-        <LuckRoll startHandler={onStartClick} width="80%" cols={[1]} list={data} ref={rollRef} />
+        <LuckRoll startHandler={onStartClick} width="99%" cols={[1]} list={data} ref={rollRef} />
       </div>
       
       <img src={cloud} className="cloud cloud1" alt="cloud" />
