@@ -10,14 +10,22 @@ import cats from '../assets/two-cat.png';
 import rocket from '../assets/rocket.png';
 import './App.css';
 
+const ORIGIN_CANDIDATES = ["准备好了吗？Let's Rock!", ...CANDIDATES];
+
 function App() {
-  const [originData, setOriginData] = useState(CANDIDATES);
-  const [pool, setPool] = useState(CANDIDATES);
+  const [originData, setOriginData] = useState(ORIGIN_CANDIDATES);
+  const [pool, setPool] = useState(ORIGIN_CANDIDATES);
   const [isEdit, setEdit] = useState(false);
   const rollRef = useRef(null);
   const editRef = useRef(null);
   const onStartClick = () => {
-      const randomNumber = generateRandomWithMax(pool.length);
+      let randomNumber = generateRandomWithMax(pool.length);
+
+      // skip the first element, as it's not a candidate but a slogan 
+      if (randomNumber === 0) {
+        randomNumber = randomNumber + 1;
+      }
+
       const valueInPool = pool[randomNumber];
       const originIndexOfCandidates = getIndexByElement(originData, valueInPool);
       
@@ -41,9 +49,11 @@ function App() {
 
   return (
     <div className="home-page">
-      <img src={logo} className="logo" alt="logo" onClick={onEditClick} />
+      <div className="logo-container">
+        <img src={logo} className="logo" alt="logo" onClick={onEditClick} />
+      </div>
       <div className='lottery-container'>
-        <span className="info">还剩 {pool.length} 位幸运选手</span>
+        <span className="info">还剩 {pool.length - 1} 位幸运选手</span>
         <LuckRoll list={originData} ref={rollRef} />
         <img src={rockIcon} className="rock-btn" onClick={onStartClick} alt="start button" />
         <img src={cats} className="cats" alt="cats" />

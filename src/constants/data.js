@@ -15,4 +15,5 @@ export const CANDIDATES = [
     '宁梓龙《Re make》',
     '蔡辰楷《Sparks Fly》',
     '樊皓岚《逆战》',
+    '七宝《骑上我心爱的小摩托》',
 ];

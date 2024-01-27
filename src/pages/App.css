@@ -10,12 +10,19 @@
 
   position: relative;
 }
-.logo {
-  width: 100px;
-  height: 100px;
+
+.logo-container {
   position: fixed;
   left: 10px;
   top: 10px;
+
+  display: flex;
+
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
 }
 
 .lottery-container {
@@ -142,7 +149,7 @@
   position: fixed;
   width: 70px;
   animation: move-rocket 10s ease-in-out infinite;
-  bottom: 400px;
+  bottom: 40px;
   left: -80px;
 }
 
