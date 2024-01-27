@@ -145,3 +145,18 @@
   bottom: 400px;
   left: -80px;
 }
+
+.edit-container {
+  position: fixed;
+  z-index: 999;
+
+  width: 100%;
+  height: 80%;
+
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.text-area {
+  width: 100%;
+}
