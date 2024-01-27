@@ -71,6 +71,16 @@
   }
 }
 
+@keyframes move-rocket {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(100vw, -100vh);
+  }
+}
+
 .cloud {
   width: 80px;
   position: fixed;
@@ -102,4 +112,36 @@
   animation: move-cloud-x2 3s ease-in-out infinite;
   top: 500px;
   right: 0;
+}
+
+.rock-btn {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.cats {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 10px;
+  bottom: -70px;
+}
+
+.info {
+  position: absolute;
+  left: 14px;
+  top: -16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.rocket {
+  position: fixed;
+  width: 70px;
+  animation: move-rocket 10s ease-in-out infinite;
+  bottom: 400px;
+  left: -80px;
 }

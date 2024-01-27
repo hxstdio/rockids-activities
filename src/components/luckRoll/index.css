@@ -39,7 +39,6 @@
   font-size: max(min(calc(1px + 60 / 1024 * 100vw), 60px), 32px);
   color: black;
   /* color: #fff; */
-  position: relative;
 }
 
 .list-container {
@@ -48,12 +47,4 @@
 
 .item {
   /* border: 2px solid red; */
-}
-
-.rock-btn {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  right: 10px;
-  cursor: pointer;
 }
