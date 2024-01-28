@@ -33,7 +33,7 @@
 
   width: 100%;
   /* top: 530px; */
-  top: 235px
+  top: 100px
 }
 
 @keyframes move-cloud-y {
@@ -138,9 +138,9 @@
 }
 
 .info {
-  position: absolute;
-  left: 14px;
-  top: -16px;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
   font-size: 16px;
   font-weight: 600;
 }

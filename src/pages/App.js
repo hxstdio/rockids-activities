@@ -53,7 +53,6 @@ function App() {
         <img src={logo} className="logo" alt="logo" onClick={onEditClick} />
       </div>
       <div className='lottery-container'>
-        <span className="info">还剩 {pool.length - 1} 位幸运选手</span>
         <LuckRoll list={originData} ref={rollRef} />
         <img src={rockIcon} className="rock-btn" onClick={onStartClick} alt="start button" />
         <img src={cats} className="cats" alt="cats" />
@@ -74,6 +73,7 @@ function App() {
       <img src={cloud1} className="cloud cloud3" alt="cloud" />
       <img src={cloud} className="cloud cloud4" alt="cloud" />
       <img src={rocket} className="rocket" alt="rocket" />
+      <p className="info">还剩 {pool.length - 1} 位幸运选手</p>
     </div>
   );
 }
