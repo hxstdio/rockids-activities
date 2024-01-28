@@ -103,7 +103,7 @@
 .cloud2 {
   width: 160px;
   animation: move-cloud-x 30s ease-in-out infinite;
-  top: 100px;
+  top: 200px;
   right: 0;
 }
 
