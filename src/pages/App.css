@@ -33,7 +33,7 @@
 
   width: 100%;
   /* top: 530px; */
-  bottom: 100px
+  top: 235px
 }
 
 @keyframes move-cloud-y {
